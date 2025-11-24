@@ -20,14 +20,13 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     """
     tasks = [wait_random(max_delay) for _ in range(n)]
     delays = await asyncio.gather(*tasks)
-    
 
     sorted_delays = []
     delays_copy = list(delays)
-    
+
     while delays_copy:
         min_delay = min(delays_copy)
         sorted_delays.append(min_delay)
-        delays_copy.remove(min_delay)
-    
+        delays_copy.remove
+
     return sorted_delays
