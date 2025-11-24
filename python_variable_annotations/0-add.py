@@ -2,16 +2,17 @@
 """0-add module
 This module contains a function that adds two integers.
 """
+from typing import Union
 
 
-def add(a: int, b: int) -> int:
-    """Adds two integers.
+def add(a: Union[int, float], b: Union[int, float]) -> float:
+    """Adds two numbers and returns the result as a float.
 
     Args:
-        a (int): The first integer.
-        b (int): The second integer.
+        a (Union[int, float]): The first number.
+        b (Union[int, float]): The second number.
 
     Returns:
-        int: The sum of the two integers.
+        float: The sum of a and b.
     """
-    return a + b
+    return float(a + b)
