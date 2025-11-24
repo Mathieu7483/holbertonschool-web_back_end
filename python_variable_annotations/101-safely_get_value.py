@@ -1,27 +1,35 @@
-#!/usr/bin/env python3
 """101-safely_get_value module
 This module contains a function that safely retrieves a value from a
-dictionary given a key, returning None if the key does not exist.
+dictionary given a key, returning a default value (None by default)
+if the key does not exist.
 """
-from typing import Mapping, Optional, TypeVar
+from typing import Mapping, Optional, TypeVar, Any, Union
 
 
 T = TypeVar('T')
 
 
-def safely_get_value(dct: Mapping[str, T], key: str) -> Optional[T]:
+def safely_get_value(dct: Mapping[Any, T],
+                     key: Any,
+                     default: Optional[T] = None) -> Optional[T]:
     """Safely retrieves a value from a dictionary by key.
 
-    If the key exists in the dictionary, returns the corresponding value.
-    If the key does not exist, returns None.
+    If the key exists in the dictionary,
+    returns the corresponding value (type T).
+    If the key does not exist,
+    returns the provided default value (type Optional[T]).
 
     Args:
-        dct (Mapping[str, T]): A dictionary with string keys and values of
-        any type.
-        key (str): The key to look for in the dictionary.
+        dct (Mapping): A dictionary-like object (Mapping[Any, T]).
+        key (Any): The key to look for in the dictionary (Any type).
+        default (Optional[T], optional):
+        The value to return if the key is not found.
+        Defaults to None.
+
     Returns:
         Optional[T]: The value associated with the key if it exists,
-        otherwise None. The type of the return value is inferred from
-        the dictionary values.
+        otherwise the default value.
     """
-    return dct.get(key, None)
+    if key in dct:
+        return dct[key]
+    return default
