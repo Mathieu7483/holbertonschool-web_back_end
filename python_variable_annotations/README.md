@@ -47,6 +47,17 @@ Chaque tâche est un fichier Python contenant une fonction ou des variables anno
 
 -----
 
+### 🌟 Tâches Avancées (Advanced)
+
+Ces tâches introduisent des concepts plus complexes du module `typing` pour gérer la flexibilité et la rigueur du *type checking*.
+
+| Fichier | Concept Clé | Annotations Avancées |
+| :--- | :--- | :--- |
+| `100-safe_first_element.py` | **Duck Typing** et flexibilité d'entrée | `Sequence[Any]` -\> `Optional[Any]` |
+| `101-safely_get_value.py` | **Généricité** et dépendance de type | Utilisation de `TypeVar` (ou `~T`) pour garantir que le type du `default` correspond au type de retour potentiel, ainsi que `Mapping`. |
+| `102-type_checking.py` | **Vérification Statique (`mypy`)** | Utilisation de `mypy` pour corriger les incohérences de type, notamment le mélange de `Tuple` et `List` dans les annotations et la conversion implicite d'arguments (`3.0` vs `int`). |
+
+-----
 ## ⚙️ Prérequis
 
   * **Interpréteur :** Python 3.9 (ou supérieur).
