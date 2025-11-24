@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """101-safely_get_value module
 This module contains a function that safely retrieves a value from a
 dictionary given a key, returning a default value (None by default)
