@@ -9,7 +9,8 @@ wait_random = __import__('0-basic_async_syntax').wait_random
 
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
-    """Runs multiple wait_random coroutines concurrently.
+    """Runs multiple wait_random coroutines concurrently and returns
+    the delays in ascending order of completion time.
 
     Args:
         n (int): Number of times to spawn wait_random.
@@ -18,16 +19,11 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     Returns:
         List[float]: A list of delay times in ascending order.
     """
-    tasks = [wait_random(max_delay) for _ in range(n)]
-    delays = await asyncio.gather(*tasks)
+    coroutines = [wait_random(max_delay) for _ in range(n)]
+    delays = []
 
+    for finished_coroutine in asyncio.as_completed(coroutines):
+        delay = await finished_coroutine
+        delays.append(delay)
 
-    sorted_delays = []
-    delays_copy = list(delays)
-
-    while delays_copy:
-        min_delay = min(delays_copy)
-        sorted_delays.append(min_delay)
-        delays_copy.remove
-
-    return sorted_delays
+    return delays
