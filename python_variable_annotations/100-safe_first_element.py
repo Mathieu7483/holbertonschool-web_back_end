@@ -9,11 +9,13 @@ from typing import Sequence, Any, Optional
 def safe_first_element(lst: Sequence[Any]) -> Optional[Any]:
     """Retrieves the first element of a sequence safely.
 
-    If the sequence is empty, returns None. Otherwise, returns the first element,
+    If the sequence is empty, returns None. Otherwise,
+    returns the first element,
     whose type is inferred from the sequence.
 
     Args:
-        lst (Sequence[Any]): A sequence (e.g., list, tuple, string) of any type.
+        lst (Sequence[Any]): A sequence (e.g., list, tuple, string)
+        of any type.
 
     Returns:
         Optional[Any]: The first element of the sequence if it exists,
