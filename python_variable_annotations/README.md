@@ -99,7 +99,7 @@ mypy 5-sum_list.py
 
 **Mathieu**
 
-  * [Lien vers votre profil GitHub]([Votre lien GitHub ici])
+[Mathieu GODALIER](https://github.com/Mathieu7483) - Élève en programmation à la Holberton School
 
 -----
 
