@@ -4,7 +4,7 @@ This module contains a function that safely retrieves a value from a
 dictionary given a key, returning a default value (None by default)
 if the key does not exist.
 """
-from typing import Mapping, TypeVar, Any, Optional, Union
+from typing import Mapping, TypeVar, Any, Union
 
 
 T = TypeVar('T')
@@ -12,7 +12,7 @@ T = TypeVar('T')
 
 def safely_get_value(dct: Mapping[Any, T],
                      key: Any,
-                     default: Optional[T] = None) -> Union[Any, T]:
+                     default: Union[T] = None) -> Union[Any, T]:
     """Safely retrieves a value from a dictionary by key.
 
     Args:
