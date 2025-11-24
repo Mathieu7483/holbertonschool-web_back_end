@@ -5,6 +5,7 @@ repeating each element a specified number of times.
 """
 from typing import List, Tuple
 
+
 def zoom_array(lst: Tuple, factor: int = 2) -> List:
     """Zooms into a tuple by repeating each element.
 
@@ -21,6 +22,7 @@ def zoom_array(lst: Tuple, factor: int = 2) -> List:
         for i in range(factor)
     ]
     return zoomed_in
+
 
 array = (12, 72, 91)
 
