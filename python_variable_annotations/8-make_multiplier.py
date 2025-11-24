@@ -6,7 +6,7 @@ based on a given float factor.
 from typing import Callable
 
 
-def make_multiplier(factor: float) -> Callable[[float], float]:
+def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """Creates a multiplier function that
     multiplies its input by the given factor.
 
