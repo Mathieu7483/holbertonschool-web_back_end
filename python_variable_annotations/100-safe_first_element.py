@@ -3,21 +3,22 @@
 This module contains a function that safely retrieves the first element
 of a list, returning None if the list is empty.
 """
-from typing import List, Union, Optional
+from typing import Sequence, Any, Optional
 
 
-def safe_first_element(lst: List[Union[int, float]]) -> Optional[Union[int, float]]:
-    """Retrieves the first element of a list safely.
+def safe_first_element(lst: Sequence[Any]) -> Optional[Any]:
+    """Retrieves the first element of a sequence safely.
 
-    If the list is empty, returns None. Otherwise, returns the first element,
-    which can be an integer or a float.
+    If the sequence is empty, returns None. Otherwise, returns the first element,
+    whose type is inferred from the sequence.
 
     Args:
-        lst (List[Union[int, float]]): A list of integers and/or floats.
+        lst (Sequence[Any]): A sequence (e.g., list, tuple, string) of any type.
 
     Returns:
-        Optional[Union[int, float]]: The first element of the list if it exists,
-        otherwise None.
+        Optional[Any]: The first element of the sequence if it exists,
+        otherwise None. The type of the return value is inferred from the
+        sequence elements.
     """
     if lst:
         return lst[0]
