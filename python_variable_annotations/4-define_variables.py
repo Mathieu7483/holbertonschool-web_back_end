@@ -4,7 +4,7 @@ This module defines variables with specific types using variable annotations.
 """
 import math
 
-# Global variable annotations (Note the spaces around '=' for assignment)
+
 a: int = 1
 pi: float = 3.14
 i_understand_annotations: bool = True
