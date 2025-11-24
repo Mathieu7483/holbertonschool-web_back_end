@@ -1,5 +1,5 @@
 <p align="center"\>
-<img src="[https://github.com/Mathieu7483/Aiko78-Photgraphy/blob/main/img/HTML%20Advanced%20Structure.png](https://www.google.com/search?q=https://github.com/Mathieu7483/Aiko78-Photgraphy/blob/main/img/HTML%2520Advanced%2520Structure.png)"\>
+<img src="https://github.com/Mathieu7483/Aiko78-Photgraphy/blob/main/img/HTML%20Advanced%20Structure.png"\>
 </p\>
 
 -----
