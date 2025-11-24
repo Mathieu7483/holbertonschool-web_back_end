@@ -12,7 +12,7 @@ T = TypeVar('T')
 
 def safely_get_value(dct: Mapping[Any, T],
                      key: Any,
-                     default: Optional[T] = None) -> Optional[T]:
+                     default: Optional[T] = None) -> Union[T, Optional[T]]:
     """Safely retrieves a value from a dictionary by key.
 
     If the key exists in the dictionary,
