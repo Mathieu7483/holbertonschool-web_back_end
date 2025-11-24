@@ -10,9 +10,9 @@ from typing import Mapping, TypeVar, Any, Union
 T = TypeVar('T')
 
 
-def safely_get_value(dct: Mapping[Any, T],
+def safely_get_value(dct: Mapping,
                      key: Any,
-                     default: Union[T] = None) -> Union[Any, T]:
+                     default: Union[T, None] = None) -> Union[Any, T]:
     """Safely retrieves a value from a dictionary by key.
 
     Args:
