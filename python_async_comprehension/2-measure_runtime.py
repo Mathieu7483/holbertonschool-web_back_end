@@ -4,25 +4,25 @@ This module measures the total runtime of multiple asynchronous coroutines.
 """
 import asyncio
 import time
-from typing import Callable
+async_comprehension = __import__('1-async_comprehension').async_comprehension
 
 
-async def measure_runtime(coro: Callable, n: int) -> float:
-    """Measures the total runtime of executing a coroutine n times concurrently.
+async def measure_runtime() -> float:
+    """Measures the total runtime of executing
+    async_comprehension four times in parallel.
 
-    This function creates n tasks for the given coroutine and runs them
-    concurrently using asyncio.gather. It measures the time taken to complete
-    all tasks and returns the total runtime.
-
-    Args:
-        coro (Callable): The asynchronous coroutine function to be executed.
-        n (int): The number of times to execute the coroutine.
+    This coroutine executes async_comprehension four times concurrently using
+    asyncio.gather and measures the total time taken.
 
     Returns:
-        float: The total runtime in seconds.
+        float: The total time taken to execute all four instances, in seconds.
     """
-    start_time = time.perf_counter()
-    await asyncio.gather(*(coro() for _ in range(n)))
-    end_time = time.perf_counter()
-    total_runtime = end_time - start_time
-    return total_runtime
+    start_time = time.time()
+    await asyncio.gather(
+        async_comprehension(),
+        async_comprehension(),
+        async_comprehension(),
+        async_comprehension()
+    )
+    end_time = time.time()
+    return end_time - start_time
