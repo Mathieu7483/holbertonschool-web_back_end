@@ -8,7 +8,7 @@
 
 -----
 
-# 📝 Description du Projet
+## 📝 Description du Projet
 
 Ce projet se concentre sur l'application des concepts de programmation asynchrone de Python (**`asyncio`**) aux structures de données et aux itérateurs. L'objectif est de maîtriser les **Générateurs Asynchrones** (utilisant `async for` et `yield`) et les **Compréhensions Asynchrones** (`[await f(i) for i in async_iter]`).
 
@@ -16,7 +16,7 @@ Ceci représente une approche moderne et élégante pour gérer des flux de donn
 
 -----
 
-# 🎯 Objectifs d'Apprentissage
+## 🎯 Objectifs d'Apprentissage
 
 À la fin de ce projet, vous devez être capable d'expliquer et d'implémenter :
 
@@ -27,7 +27,7 @@ Ceci représente une approche moderne et élégante pour gérer des flux de donn
 
 -----
 
-# 💻 Contenu de l'Exercice
+## 💻 Contenu de l'Exercice
 
 Ce projet se compose de fonctions et coroutines utilisant des fonctionnalités avancées de Python 3.9 pour la concurrence.
 
@@ -39,7 +39,7 @@ Ce projet se compose de fonctions et coroutines utilisant des fonctionnalités a
 
 -----
 
-# ⚙️ Prérequis
+## ⚙️ Prérequis
 
   * **Interpréteur :** Python 3.9 (ou supérieur).
   * **Style de Code :** `pycodestyle` (version 2.5.x).
@@ -49,7 +49,7 @@ Ce projet se compose de fonctions et coroutines utilisant des fonctionnalités a
 
 -----
 
-# 🚀 Exécution
+## 🚀 Exécution
 
 Les scripts sont exécutés à l'aide de la boucle d'événements `asyncio.run()`, assurant l'exécution correcte des coroutines et des générateurs asynchrones.
 
@@ -61,8 +61,6 @@ Les scripts sont exécutés à l'aide de la boucle d'événements `asyncio.run()
 
 -----
 
-# ✒️ Auteur
-
-**Mathieu**
+## ✒️ Auteur
 
 [Mathieu GODALIER](https://github.com/Mathieu7483) - Élève en programmation à la Holberton School
