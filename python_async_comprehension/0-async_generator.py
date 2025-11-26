@@ -5,10 +5,10 @@ random numbers with a delay.
 """
 import asyncio
 from random import uniform
-from typing import Generator
+from typing import AsyncGenerator
 
 
-async def async_generator() -> Generator[float, None, None]:
+async def async_generator() -> AsyncGenerator[float, None]:
     """Asynchronously yield 10 random float numbers between 0 and 10.
 
     This coroutine loops 10 times. On each iteration, it asynchronously waits
