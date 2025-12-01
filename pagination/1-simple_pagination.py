@@ -2,6 +2,7 @@
 """ Simple helper function for pagination """
 from typing import List
 
+
 def index_range(page: int, page_size: int) -> tuple:
     """
     Return a tuple of size two containing a start index and an end index
@@ -38,7 +39,7 @@ class Server:
                 dataset = [row for row in reader]
             self.__dataset = dataset[1:]  # Skip header
         return self.__dataset
-    
+
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
         """
         Get a page of the dataset.
@@ -50,8 +51,10 @@ class Server:
         Returns:
             List[List]: A list of lists representing the page of the dataset.
         """
-        assert isinstance(page, int) and page > 0, "page must be a positive integer"
-        assert isinstance(page_size, int) and page_size > 0, "page_size must be a positive integer"
+        assert isinstance(page, int), "page must be a positive integer"
+        assert page > 0, "page must be a positive integer"
+        assert isinstance(page_size, int), "page_size must be + integer"
+        assert page_size > 0, "page_size must be a positive integer"
 
         start_index, end_index = index_range(page, page_size)
         dataset = self.dataset()
