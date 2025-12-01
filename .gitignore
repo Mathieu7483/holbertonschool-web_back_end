@@ -20,3 +20,15 @@ __pycache__
 *.pyo
 # Ignorer les dossiers virtuels
 venv/
+#ignorer les fichiers zip
+*.zip
+#ignorer les fichiers bson
+*.bson
+#ignorer les fichiers tar
+*.tar
+#ignorer les fichiers json
+*.json
+#ignorer les fichiers dump
+*.dump
+#ignorer le dossier dump
+dump/
