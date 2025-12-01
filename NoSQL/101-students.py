@@ -4,7 +4,7 @@
 
 def top_students(mongo_collection):
     """Returns all students sorted by average score"""
-    pipeline = [
+    agregation_sequence = [
         {
             "$unwind": "$topics"
         },
@@ -20,5 +20,5 @@ def top_students(mongo_collection):
         }
     ]
 
-    result = list(mongo_collection.aggregate(pipeline))
+    result = list(mongo_collection.aggregate(agregation_sequence))
     return result
