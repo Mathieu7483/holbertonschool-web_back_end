@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ Simple helper function for pagination """
 from typing import List
-
+import csv
 
 def index_range(page: int, page_size: int) -> tuple:
     """
@@ -34,10 +34,9 @@ class Server:
         """
         if self.__dataset is None:
             with open(self.DATA_FILE) as f:
-                import csv
                 reader = csv.reader(f)
                 dataset = [row for row in reader]
-            self.__dataset = dataset[1:]  # Skip header
+            self.__dataset = dataset[1:]
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
