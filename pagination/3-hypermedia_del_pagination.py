@@ -51,7 +51,7 @@ class Server:
         """
         assert isinstance(index, int), "index must be a non-negative integer"
         assert index >= 0, "index must be a non-negative integer"
-        assert isinstance(page_size, int), "page_size must be a positive integer"
+        assert isinstance(page_size, int), "page_size must be a + integer"
         assert page_size > 0, "page_size must be a positive integer"
 
         indexed_data = self.indexed_dataset()
@@ -65,7 +65,8 @@ class Server:
                 collected += 1
             current_index += 1
 
-        next_index = current_index if current_index < len(indexed_data) else None
+        next_index = current_index \
+            if current_index < len(indexed_data) else None
 
         return {
             'index': index,
