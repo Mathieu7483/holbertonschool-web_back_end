@@ -1,9 +1,3 @@
-Absolument, Mathieu. Après avoir maîtrisé les bases d'ES6, le passage aux **Classes ES6** est l'étape logique pour appliquer les principes de la **Programmation Orientée Objet (POO)** en JavaScript. C'est essentiel pour écrire du code structuré et maintenable.
-
-Voici le `README.md` détaillé et professoral pour ce projet.
-
------
-
 # 🎓 ES6 Classes (Programmation Orientée Objet en JavaScript)
 
 -----
