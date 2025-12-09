@@ -1,3 +1,8 @@
+<p align="center"\>
+<img src="https://github.com/Mathieu7483/Aiko78-Photgraphy/blob/main/img/Project%20ES6.png"/>
+</p\>
+
+
 # 🎓 ES6 Classes (Programmation Orientée Objet en JavaScript)
 
 -----
