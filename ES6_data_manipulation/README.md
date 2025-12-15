@@ -76,8 +76,6 @@ Ce projet utilise l'environnement de développement JavaScript standard moderne.
 
 -----
 
------
-
 ## ✒️ Auteur
 
 **Mathieu**
