@@ -11,18 +11,21 @@ function countStudents(path) {
 
   const lines = content.split('\n').filter((line) => line.trim() !== '');
   
-  const header = lines.shift();
-  if (!header) return;
+   const header = lines.shift();
+  if (!header || lines.length === 0) {
+    console.log('Number of students: 0');
+    return;
+  }
 
   const studentsByField = {};
   let totalStudents = 0;
 
   lines.forEach((line) => {
     const data = line.split(',');
-    if (data.length === 4) {
+    if (data.length === 4 && data[0].trim() !== '') {
       totalStudents += 1;
-      const firstName = data[0];
-      const field = data[3];
+      const firstName = data[0].trim();
+      const field = data[3].trim();
 
       if (!studentsByField[field]) {
         studentsByField[field] = [];
