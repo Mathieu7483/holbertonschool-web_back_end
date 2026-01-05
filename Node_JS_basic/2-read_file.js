@@ -10,8 +10,8 @@ function countStudents(path) {
   }
 
   const lines = content.split('\n').filter((line) => line.trim() !== '');
-  
-   const header = lines.shift();
+
+  const header = lines.shift();
   if (!header || lines.length === 0) {
     console.log('Number of students: 0');
     return;
