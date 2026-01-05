@@ -13,7 +13,7 @@ const app = http.createServer(async (req, res) => {
     const responseParts = ['This is the list of our students'];
     const originalLog = console.log;
 
-    console.log = (message) => responseParts.push(message);
+    console.log = (msg) => responseParts.push(msg);
 
     try {
       await countStudents(DATABASE);
@@ -21,7 +21,7 @@ const app = http.createServer(async (req, res) => {
       res.end(responseParts.join('\n'));
     } catch (error) {
       console.log = originalLog;
-      res.end(`${responseParts[0]}\n${error.message}`);
+      res.end(`${responseParts[0]}\n${error.msg}`);
     }
   } else {
     res.statusCode = 404;
