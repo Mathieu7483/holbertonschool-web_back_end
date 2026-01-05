@@ -24,10 +24,6 @@ app.get('/students', async (req, res) => {
   }
 });
 
-app.use((req, res) => {
-  res.status(404).send('Not Found');
-});
-
 app.listen(1245);
 
 module.exports = app;
