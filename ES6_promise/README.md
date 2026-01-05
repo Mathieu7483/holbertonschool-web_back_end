@@ -1,11 +1,3 @@
-Bonjour Mathieu,
-
-Le projet sur les **Promesses ES6** est la suite logique de votre apprentissage sur les classes et la manipulation de données. C'est un concept **fondamental** pour gérer le code **asynchrone** en JavaScript, remplaçant les *callbacks* complexes et conduisant à des applications plus robustes.
-
-Voici un `README.md` détaillé qui met l'accent sur le modèle et la gestion des états des Promesses.
-
------
-
 # 🤝 ES6 Promises (Gestion du Code Asynchrone)
 
 -----
