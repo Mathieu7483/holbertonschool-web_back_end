@@ -73,7 +73,7 @@ Le projet utilise **Mocha** pour les tests unitaires et **ESLint** pour le respe
 
 ## 👤 Auteur
 
-**Mathieu**[Mathieu GODALIER](https://github.com/Mathieu7483) - Élève en programmation à la Holberton School
+[Mathieu GODALIER](https://github.com/Mathieu7483) - Élève en programmation à la Holberton School
 
 ## ⚖️ Licence
 
