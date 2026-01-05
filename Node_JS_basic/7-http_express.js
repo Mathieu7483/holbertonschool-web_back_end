@@ -20,7 +20,7 @@ app.get('/students', async (req, res) => {
     res.status(200).send(responseParts.join('\n'));
   } catch (error) {
     console.log = originalLog;
-    res.status(500).send(`${responseParts[0]}\n${error.msg}`);
+    res.status(500).send(`${responseParts[0]}\n${error.message}`);
   }
 });
 
