@@ -1,7 +1,7 @@
 import readDatabase from '../utils';
 
 class StudentsController {
-  static getAllStudents(request, response) {
+  static getAllStudents(req, res) {
     const dataPath = process.argv[2];
 
     readDatabase(dataPath)
@@ -18,29 +18,29 @@ class StudentsController {
           );
         }
 
-        response.status(200).send(responseParts.join('\n'));
+        res.status(200).send(responseParts.join('\n'));
       })
       .catch(() => {
-        response.status(500).send('Cannot load the database');
+        res.status(500).send('Cannot load the database');
       });
   }
 
-  static getAllStudentsByMajor(request, response) {
-    const { major } = request.params;
+  static getAllStudentsByMajor(req, res) {
+    const { major } = req.params;
     const dataPath = process.argv[2];
 
     if (major !== 'CS' && major !== 'SWE') {
-      response.status(500).send('Major parameter must be CS or SWE');
+      res.status(500).send('Major parameter must be CS or SWE');
       return;
     }
 
     readDatabase(dataPath)
       .then((fields) => {
         const students = fields[major] || [];
-        response.status(200).send(`List: ${students.join(', ')}`);
+        res.status(200).send(`List: ${students.join(', ')}`);
       })
       .catch(() => {
-        response.status(500).send('Cannot load the database');
+        res.status(500).send('Cannot load the database');
       });
   }
 }
