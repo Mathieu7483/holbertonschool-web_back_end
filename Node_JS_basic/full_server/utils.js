@@ -8,7 +8,7 @@ const readDatabase = (path) => new Promise((resolve, reject) => {
     }
     const lines = data.split('\n').filter((line) => line.trim() !== '');
     const studentsByField = {};
-    
+
     const rows = lines.slice(1);
 
     for (const row of rows) {
