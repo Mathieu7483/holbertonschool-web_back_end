@@ -8,14 +8,13 @@ class StudentsController {
       .then((fields) => {
         const responseParts = ['This is the list of our students'];
 
-        const sortedFields = Object.keys(fields).sort((a, b) => 
-          a.toLowerCase().localeCompare(b.toLowerCase())
-        );
+        const sortedFields = Object.keys(fields)
+          .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
         for (const field of sortedFields) {
           const students = fields[field];
           responseParts.push(
-            `Number of students in ${field}: ${students.length}. List: ${students.join(', ')}`
+            `Number of students in ${field}: ${students.length}. List: ${students.join(', ')}`,
           );
         }
 
@@ -25,7 +24,6 @@ class StudentsController {
         response.status(500).send('Cannot load the database');
       });
   }
-
 
   static getAllStudentsByMajor(request, response) {
     const { major } = request.params;
